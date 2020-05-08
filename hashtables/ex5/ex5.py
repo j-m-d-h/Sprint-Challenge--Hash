@@ -1,8 +1,15 @@
 def finder(files, queries):
-
-    """
-    YOUR CODE HERE
-    """
+    cache = {}
+    result = []
+    for path in files:
+        key = path.split('/')[-1]
+        if key in cache:
+            cache[key] = [*cache[key],path]
+        else:
+            cache[key] = [path]
+    for name in queries:
+        if name in cache:
+            result.extend(cache[name])
 
     return result
 

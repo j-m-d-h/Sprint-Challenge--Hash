@@ -6,9 +6,13 @@ class Ticket:
 
 
 def reconstruct_trip(tickets, length):
-    
-    """
-    YOUR CODE HERE
-    """
+    table = {}
+    for tick in tickets:
+        table[tick.source] = tick.destination
+    route = []
+    place = table['NONE']
+    for i in range(length):
+        route.append(place)
+        place = table[place]
 
     return route

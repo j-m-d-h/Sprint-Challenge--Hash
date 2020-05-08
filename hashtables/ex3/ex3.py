@@ -1,11 +1,5 @@
 def intersection(arrays):
 
-    """
-    YOUR CODE HERE
-    """
-
-    return result
-
 
 if __name__ == "__main__":
     arrays = []
